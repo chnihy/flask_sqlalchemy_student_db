@@ -1,7 +1,11 @@
 # Flask SQL alchemy student database
-
+#### Home Page
 <img src="/app/static/screenshot_1.png" alt="preview 1">
+
+#### New Student Page
 <img src="/app/static/screenshot_2.png" alt="preview 2">
+
+#### View all Students Page
 <img src="/app/static/screenshot_3.png" alt="preview 3">
 
 ## About 
