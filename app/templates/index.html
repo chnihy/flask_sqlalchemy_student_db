@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block app_content %}
+	<h1>School Database</h1>
+	
+	<p>
+		Built with <a href="https://flask-sqlalchemy.palletsprojects.com/en/2.x/", target="blank">Flask Sqlalchemy</a>
+	</p>
+	
+	<div class="d-grid gap-2 col-3 mx-left">
+		<a class="btn btn-primary" href={{ url_for('newstudent') }} type="button">Enter new student</a>
+		<a class="btn btn-primary" href={{ url_for('students') }} type="button">View Current Students</a>
+	</div>
+
+{% endblock %}
