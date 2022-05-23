@@ -40,5 +40,5 @@ flask run
 Then, open http://127.0.0.1:5000 in your browser
 
 ## Planned updates
-- [ ] Enhanced Search capability
+- [ ] Improved Search capability
 - [ ] Login
