@@ -32,13 +32,9 @@ export FLASK_APP=main.py
 ### Launch
 ```bash
 flask run
- * Serving Flask app 'main.py' (lazy loading)
- * Environment: development
- * Debug mode: on
+...
  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 110-171-379
+...
 ```
 
 Then, open http://127.0.0.1:5000 in your browser
