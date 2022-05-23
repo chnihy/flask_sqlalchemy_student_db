@@ -1,7 +1,6 @@
 from app import app, db
 
 class Student(db.Model):
-	
 	id = db.Column(db.Integer, primary_key=True)
 	student_name = db.Column(db.String(20))
 	parent_name = db.Column(db.String(20), index=True)

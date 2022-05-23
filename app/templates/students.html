@@ -5,6 +5,7 @@
   <table id="data" class="table table-striped">
     <thead>
       <tr>
+        <th>ID</th>
         <th>Student</th>
         <th>Parent</th>
         <th>Email</th>
@@ -16,11 +17,19 @@
     <tbody>
       {% for student in students %}
         <tr>
+          <td>{{ student.id }}</td>
           <td>{{ student.student_name }}</td>
           <td>{{ student.parent_name }}</td>
           <td>{{ student.email }}</td>
           <td>{{ student.phone }}</td>
           <td>{{ student.address }}</td>
+          <td>
+            <form action="{{ url_for('delete') }}" method="POST">
+              <input type="hidden" name="id" value={{student.id}} />
+              <input type="hidden" name="student_name" value={{student.student_name}} />
+              <input type="submit" value="Delete" />
+            </form>
+          </td>
           <!--<td><a href={{ url_for('student') }}>Edit</a> <a href={{ url_for('index') }}>Delete</a></td>-->
         </tr>
       {% endfor %}

@@ -24,7 +24,7 @@ def newstudent():
         db.session.add(student)
         db.session.commit()
         flash('New Student: {} Added'.format(form.student_name.data))
-        return redirect(url_for('index'))
+        return redirect(url_for('students'))
     return render_template('newstudent.html', title='New Student', form=form)
 
 @app.route('/students')
@@ -42,6 +42,20 @@ def student():
     else:
         return render_template('index.html')
 
-'''@app.route('/delete')
-def delete()
-    pass'''
+@app.route('/delete', methods=["POST"])
+def delete():
+    """Remove student from db
+    
+    Keyword arguments:
+    id  -- student.student_id
+    Return: url_for('students')
+    """
+    # id = form.id.data
+    student = Student.query.filter_by(id=request.form['id']).first()
+    
+    db.session.delete(student)
+    db.session.commit()
+    
+    flash('Student: {} Deleted'.format(request.form['student_name']))
+    
+    return redirect(url_for('students'))
